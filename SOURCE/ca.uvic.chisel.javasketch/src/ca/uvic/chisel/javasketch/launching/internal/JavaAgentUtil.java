@@ -39,7 +39,7 @@ public final class JavaAgentUtil {
 		
 		if ("win32".equals(os) && "x86".equals(arch)) {
 			fileUrl = SketchPlugin.getDefault().getBundle().getResource("sketch_win32.dll");
-		} else if ("win32".equals(os)  && ("amd64".equals(arch) || "x86_64".equals(arch))) { //Was expecting amd64 but in testing x86_64 was returned. Value supposed to be Java arch not CPU arch 
+		} else if (("amd64".equals(arch) || "x86_64".equals(arch))) { //Was expecting amd64 but in testing x86_64 was returned. Value supposed to be Java arch not CPU arch 
 				fileUrl = SketchPlugin.getDefault().getBundle().getResource("sketch_win64.dll");
 		} else if ("linux".equals(os)) {
 			fileUrl = SketchPlugin.getDefault().getBundle().getResource("libsketch_linux32.so");
